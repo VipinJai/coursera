@@ -32,6 +32,7 @@
 body {
     padding: 50px 0px 0px 0px;
     z-index: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .navbar-dark {}
@@ -43,4 +44,10 @@ body {
 
 .navbar-dark {
     background-color: #512DA8;
+}
+
+#reservebtn {
+    padding-left: 48px;
+    padding-right: 48px;
+
 }
