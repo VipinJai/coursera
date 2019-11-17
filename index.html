@@ -40,7 +40,7 @@
           </li>
         </ul>
         <span class="navbar-text">
-          <a href="" data-toggle="modal" data-target="#loginModal"><span class="fa fa-sign-in"></span> Login</a>
+          <a id="loginButton"><span class="fa fa-sign-in"></span> Login</a>
         </span>
       </div>
     </div>
@@ -53,11 +53,10 @@
       <div class="modal-content">
         <div class="modal-header">
           <h4 class="modal-title">Login</h4>
-          <button type="button" class="close" data-dismiss="modal">
+          <button type="button" class="close" id="closelogin">
             &times;
           </button>
         </div>
-
         <div class="modal-body">
           <form>
             <div class="form-row">
@@ -79,7 +78,7 @@
               </div>
             </div>
             <div class="form-row">
-              <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">
+              <button type="button" class="btn btn-secondary btn-sm ml-auto" id="loginCancel">
                 Cancel
               </button>
               <button type="submit" class="btn btn-primary btn-sm ml-1">
@@ -98,7 +97,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h4 class="modal-title">Reserve a Table</h4>
-          <button type="button" class="close" data-dismiss="modal">
+          <button type="button" class="close" id="modal">
             &times;
           </button>
         </div>
@@ -180,7 +179,7 @@
 
             <div class="form-group row">
               <div class="offset-md-3 col-md-10">
-                <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">
+                <button type="button" class="btn btn-secondary btn-sm ml-auto" id="reserveCancel">
                   Cancel
                 </button>
 
@@ -214,8 +213,7 @@
         </div>
 
         <div class="col-12 col-sm-4 align-items-center justify-content-center d-flex">
-          <a role="button" class="btn btn-block nav-link btn-warning" data-toggle="modal"
-            data-target="#reserveModal">Reserve Table</a>
+          <a class="btn btn-block nav-link btn-warning" id="reserveButton">Reserve Table</a>
         </div>
       </div>
     </div>
@@ -425,8 +423,7 @@
   <script src="node_modules\popper.js\dist\umd\popper.min.js"></script>
 
   <script src="node_modules\bootstrap\dist\js\bootstrap.min.js"></script>
-  <script> 
-
+  <script>
     $(document).ready(function () {
       $("#mycarousel").carousel({
         interval: 2000
@@ -443,8 +440,42 @@
         }
 
       });
-  });
-  
+    });
+
+
+    // login 
+
+    $("#loginButton").click(function () {
+
+      $("#loginModal").modal('show')
+    });
+
+
+    $("#closelogin").click(function () {
+
+      $("#loginModal").modal('hide')
+    });
+
+    $("#loginCancel").click(function () {
+
+      $("#loginModal").modal('hide')
+    });
+    // modal java script and jquery reserve table
+
+    $("#reserveButton").click(function () {
+
+      $("#reserveModal").modal('show')
+    });
+
+    $("#modal").click(function () {
+
+      $("#reserveModal").modal('hide')
+    });
+
+    $("#reserveCancel").click(function () {
+
+      $("#reserveModal").modal('hide')
+    });
   </script>
 
 
