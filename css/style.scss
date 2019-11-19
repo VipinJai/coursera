@@ -62,13 +62,12 @@ body {
     padding: 10px;
 }
 
-
-
 .carousel {
     background: $background-dark;
 
     .carousel-item {
         height: $carousel-item-height;
+        background-color: $background-dark;
 
         img {
             position: absolute;
@@ -76,18 +75,13 @@ body {
             left: 0;
             min-height: 300px;
         }
-
     }
-
-
 }
 
-
-
 #carouselButton {
+    right: 0px;
     position: absolute;
-    right: 0%;
-    bottom: 0%;
+    bottom: 0px;
     z-index: 1;
 }
 
